@@ -4202,3 +4202,210 @@ gameId,year,round,game,date,venue,startTime,attendance,homeTeam,homeTeamScore,aw
 2026R2407,2026,R24,7,2026-08-22,S.C.G.,00:00,,Sydney,,North Melbourne,,,matt
 2026R2408,2026,R24,8,2026-08-22,Adelaide Oval,00:00,,Adelaide,,Greater Western Sydney,,,matt
 2026R2409,2026,R24,9,2026-08-22,Perth Stadium,00:00,,West Coast,,Hawthorn,,,matt
+2027R0101,2027,R01,1,2027-03-17,S.C.G.,19:30,,Sydney,,Geelong,,,zerohanger
+2027R0102,2027,R01,2,2027-03-18,Perth Stadium,17:10,,Fremantle,,Western Bulldogs,,,zerohanger
+2027R0103,2027,R01,3,2027-03-19,M.C.G.,19:50,,Hawthorn,,Brisbane,,,zerohanger
+2027R0104,2027,R01,4,2027-03-20,M.C.G.,12:35,,Richmond,,Carlton,,,zerohanger
+2027R0105,2027,R01,5,2027-03-20,Adelaide Oval,15:45,,Adelaide,,Greater Western Sydney,,,zerohanger
+2027R0106,2027,R01,6,2027-03-20,M.C.G.,19:40,,St Kilda,,Collingwood,,,zerohanger
+2027R0107,2027,R01,7,2027-03-21,Docklands,13:10,,North Melbourne,,Port Adelaide,,,zerohanger
+2027R0108,2027,R01,8,2027-03-21,M.C.G.,15:15,,Melbourne,,Essendon,,,zerohanger
+2027R0109,2027,R01,9,2027-03-21,Perth Stadium,15:10,,West Coast,,Gold Coast,,,zerohanger
+2027R0201,2027,R02,1,2027-03-25,Gabba,18:50,,Brisbane,,Collingwood,,,zerohanger
+2027R0202,2027,R02,2,2027-03-26,Docklands,15:15,,North Melbourne,,Carlton,,,zerohanger
+2027R0203,2027,R02,3,2027-03-26,Perth Stadium,16:15,,Fremantle,,Adelaide,,,zerohanger
+2027R0204,2027,R02,4,2027-03-27,Manuka Oval,14:10,,Greater Western Sydney,,West Coast,,,zerohanger
+2027R0205,2027,R02,5,2027-03-27,Carrara,16:10,,Gold Coast,,Richmond,,,zerohanger
+2027R0206,2027,R02,6,2027-03-27,Adelaide Oval,19:40,,Port Adelaide,,Melbourne,,,zerohanger
+2027R0207,2027,R02,7,2027-03-28,M.C.G.,15:15,,Essendon,,Sydney,,,zerohanger
+2027R0208,2027,R02,8,2027-03-28,Docklands,19:20,,Western Bulldogs,,St Kilda,,,zerohanger
+2027R0209,2027,R02,9,2027-03-29,M.C.G.,15:15,,Geelong,,Hawthorn,,,zerohanger
+2027R0301,2027,R03,1,2027-04-01,M.C.G.,19:30,,Collingwood,,Fremantle,,,zerohanger
+2027R0302,2027,R03,2,2027-04-02,S.C.G.,19:15,,Sydney,,Greater Western Sydney,,,zerohanger
+2027R0303,2027,R03,3,2027-04-02,Docklands,19:50,,Carlton,,Brisbane,,,zerohanger
+2027R0304,2027,R03,4,2027-04-03,Docklands,13:35,,St Kilda,,Melbourne,,,zerohanger
+2027R0305,2027,R03,5,2027-04-03,Adelaide Oval,16:05,,Adelaide,,Western Bulldogs,,,zerohanger
+2027R0306,2027,R03,6,2027-04-03,M.C.G.,19:45,,Hawthorn,,Essendon,,,zerohanger
+2027R0307,2027,R03,7,2027-04-04,Kardinia Park,12:30,,Geelong,,Richmond,,,zerohanger
+2027R0308,2027,R03,8,2027-04-04,Carrara,15:15,,Gold Coast,,North Melbourne,,,zerohanger
+2027R0309,2027,R03,9,2027-04-04,Perth Stadium,16:10,,West Coast,,Port Adelaide,,,zerohanger
+2027R0401,2027,R04,1,2027-04-08,Adelaide Oval,19:10,,Adelaide,,Brisbane,,,zerohanger
+2027R0402,2027,R04,2,2027-04-09,Adelaide Oval,19:10,,Sydney,,Collingwood,,,zerohanger
+2027R0403,2027,R04,3,2027-04-10,Barossa Park,12:05,,Gold Coast,,Greater Western Sydney,,,zerohanger
+2027R0404,2027,R04,4,2027-04-10,Adelaide Oval,13:05,,Carlton,,Melbourne,,,zerohanger
+2027R0405,2027,R04,5,2027-04-10,Norwood Oval,16:05,,Richmond,,West Coast,,,zerohanger
+2027R0406,2027,R04,6,2027-04-10,Adelaide Oval,19:15,,Fremantle,,Hawthorn,,,zerohanger
+2027R0407,2027,R04,7,2027-04-11,Norwood Oval,12:00,,Essendon,,North Melbourne,,,zerohanger
+2027R0408,2027,R04,8,2027-04-11,Barossa Park,14:45,,St Kilda,,Geelong,,,zerohanger
+2027R0409,2027,R04,9,2027-04-11,Adelaide Oval,18:45,,Port Adelaide,,Western Bulldogs,,,zerohanger
+2027R0501,2027,R05,1,2027-04-15,M.C.G.,19:30,,Carlton,,Collingwood,,,zerohanger
+2027R0502,2027,R05,2,2027-04-16,M.C.G.,19:40,,Melbourne,,Sydney,,,zerohanger
+2027R0503,2027,R05,3,2027-04-16,Perth Stadium,18:10,,Fremantle,,West Coast,,,zerohanger
+2027R0504,2027,R05,4,2027-04-17,Adelaide Oval,12:45,,Adelaide,,Gold Coast,,,zerohanger
+2027R0505,2027,R05,5,2027-04-17,M.C.G.,16:15,,Richmond,,North Melbourne,,,zerohanger
+2027R0506,2027,R05,6,2027-04-17,Docklands,19:35,,Western Bulldogs,,Hawthorn,,,zerohanger
+2027R0507,2027,R05,7,2027-04-18,M.C.G.,12:30,,Essendon,,Geelong,,,zerohanger
+2027R0508,2027,R05,8,2027-04-18,Docklands,15:15,,St Kilda,,Port Adelaide,,,zerohanger
+2027R0509,2027,R05,9,2027-04-18,Gabba,18:10,,Brisbane,,Greater Western Sydney,,,zerohanger
+2027R0601,2027,R06,1,2027-04-22,Carrara,19:30,,Gold Coast,,Hawthorn,,,zerohanger
+2027R0602,2027,R06,2,2027-04-23,S.C.G.,19:40,,Sydney,,Adelaide,,,zerohanger
+2027R0603,2027,R06,3,2027-04-24,Gabba,13:15,,Brisbane,,West Coast,,,zerohanger
+2027R0604,2027,R06,4,2027-04-24,Kardinia Park,16:15,,Geelong,,North Melbourne,,,zerohanger
+2027R0605,2027,R06,5,2027-04-24,M.C.G.,19:40,,Melbourne,,Richmond,,,zerohanger
+2027R0606,2027,R06,6,2027-04-24,Adelaide Oval,19:40,,Port Adelaide,,Carlton,,,zerohanger
+2027R0607,2027,R06,7,2027-04-25,Manuka Oval,12:15,,Greater Western Sydney,,Western Bulldogs,,,zerohanger
+2027R0608,2027,R06,8,2027-04-25,M.C.G.,15:15,,Collingwood,,Essendon,,,zerohanger
+2027R0609,2027,R06,9,2027-04-25,Perth Stadium,18:15,,Fremantle,,St Kilda,,,zerohanger
+2027R0701,2027,R07,1,2027-04-29,Gabba,19:30,,Brisbane,,Sydney,,,zerohanger
+2027R0702,2027,R07,2,2027-04-30,M.C.G.,19:40,,Hawthorn,,Carlton,,,zerohanger
+2027R0703,2027,R07,3,2027-05-01,Traeger Park,12:45,,Melbourne,,Adelaide,,,zerohanger
+2027R0704,2027,R07,4,2027-05-01,Docklands,16:15,,Essendon,,Fremantle,,,zerohanger
+2027R0705,2027,R07,5,2027-05-01,Sydney Showground,16:35,,Greater Western Sydney,,Geelong,,,zerohanger
+2027R0706,2027,R07,6,2027-05-01,Perth Stadium,17:35,,West Coast,,Collingwood,,,zerohanger
+2027R0707,2027,R07,7,2027-05-02,Eureka Stadium,12:30,,Western Bulldogs,,Gold Coast,,,zerohanger
+2027R0708,2027,R07,8,2027-05-02,Bellerive Oval,15:15,,Richmond,,Port Adelaide,,,zerohanger
+2027R0709,2027,R07,9,2027-05-02,Docklands,18:10,,North Melbourne,,St Kilda,,,zerohanger
+2027R0801,2027,R08,1,2027-05-06,M.C.G.,19:30,,Carlton,,Geelong,,,zerohanger
+2027R0802,2027,R08,2,2027-05-07,Docklands,19:40,,Collingwood,,Western Bulldogs,,,zerohanger
+2027R0803,2027,R08,3,2027-05-07,Adelaide Oval,19:40,,Port Adelaide,,Adelaide,,,zerohanger
+2027R0804,2027,R08,4,2027-05-08,Carrara,13:15,,Gold Coast,,Essendon,,,zerohanger
+2027R0805,2027,R08,5,2027-05-08,Docklands,16:15,,St Kilda,,Richmond,,,zerohanger
+2027R0806,2027,R08,6,2027-05-08,S.C.G.,19:35,,Sydney,,North Melbourne,,,zerohanger
+2027R0807,2027,R08,7,2027-05-09,York Park,12:30,,Hawthorn,,Greater Western Sydney,,,zerohanger
+2027R0808,2027,R08,8,2027-05-09,M.C.G.,15:15,,Melbourne,,West Coast,,,zerohanger
+2027R0809,2027,R08,9,2027-05-09,Perth Stadium,17:20,,Fremantle,,Brisbane,,,zerohanger
+2027R0901,2027,R09,1,2027-05-13,Adelaide Oval,19:00,,Adelaide,,Geelong,,,zerohanger
+2027R0902,2027,R09,2,2027-05-14,M.C.G.,19:45,,Richmond,,Essendon,,,zerohanger
+2027R0903,2027,R09,3,2027-05-15,Sydney Showground,13:15,,Greater Western Sydney,,Fremantle,,,zerohanger
+2027R0904,2027,R09,4,2027-05-15,M.C.G.,13:45,,Melbourne,,Gold Coast,,,zerohanger
+2027R0905,2027,R09,5,2027-05-15,Perth Stadium,14:15,,West Coast,,Sydney,,,zerohanger
+2027R0906,2027,R09,6,2027-05-15,Docklands,19:35,,Hawthorn,,Port Adelaide,,,zerohanger
+2027R0907,2027,R09,7,2027-05-16,Gabba,12:30,,Brisbane,,St Kilda,,,zerohanger
+2027R0908,2027,R09,8,2027-05-16,M.C.G.,15:15,,Carlton,,Western Bulldogs,,,zerohanger
+2027R0909,2027,R09,9,2027-05-16,Docklands,18:10,,North Melbourne,,Collingwood,,,zerohanger
+2027R1001,2027,R10,1,2027-05-20,Perth Stadium,18:10,,Fremantle,,Melbourne,,,zerohanger
+2027R1002,2027,R10,2,2027-05-21,S.C.G.,19:40,,Sydney,,Hawthorn,,,zerohanger
+2027R1003,2027,R10,3,2027-05-22,Adelaide Oval,12:45,,Port Adelaide,,Brisbane,,,zerohanger
+2027R1004,2027,R10,4,2027-05-22,Kardinia Park,16:15,,Geelong,,West Coast,,,zerohanger
+2027R1005,2027,R10,5,2027-05-22,Docklands,16:35,,Western Bulldogs,,North Melbourne,,,zerohanger
+2027R1006,2027,R10,6,2027-05-22,M.C.G.,19:35,,Collingwood,,Richmond,,,zerohanger
+2027R1007,2027,R10,7,2027-05-23,Docklands,12:30,,St Kilda,,Greater Western Sydney,,,zerohanger
+2027R1008,2027,R10,8,2027-05-23,M.C.G.,15:15,,Essendon,,Adelaide,,,zerohanger
+2027R1009,2027,R10,9,2027-05-23,Marrara Oval,17:40,,Gold Coast,,Carlton,,,zerohanger
+2027R1101,2027,R11,1,2027-05-27,Docklands,19:30,,Western Bulldogs,,Sydney,,,zerohanger
+2027R1102,2027,R11,2,2027-05-28,Kardinia Park,19:40,,Geelong,,Melbourne,,,zerohanger
+2027R1103,2027,R11,3,2027-05-29,York Park,13:15,,Hawthorn,,St Kilda,,,zerohanger
+2027R1104,2027,R11,4,2027-05-29,Sydney Showground,16:15,,Greater Western Sydney,,Essendon,,,zerohanger
+2027R1105,2027,R11,5,2027-05-29,Adelaide Oval,19:05,,Port Adelaide,,Collingwood,,,zerohanger
+2027R1106,2027,R11,6,2027-05-30,Hands Oval,13:15,,North Melbourne,,West Coast,,,zerohanger
+2027R1107,2027,R11,7,2027-05-30,Docklands,18:10,,Carlton,,Fremantle,,,zerohanger
+2027R1201,2027,R12,1,2027-06-03,Docklands,19:30,,Western Bulldogs,,Melbourne,,,zerohanger
+2027R1202,2027,R12,2,2027-06-04,M.C.G.,19:40,,Collingwood,,Hawthorn,,,zerohanger
+2027R1203,2027,R12,3,2027-06-05,M.C.G.,13:35,,Richmond,,Adelaide,,,zerohanger
+2027R1204,2027,R12,4,2027-06-05,Gabba,16:35,,Brisbane,,Gold Coast,,,zerohanger
+2027R1205,2027,R12,5,2027-06-05,Perth Stadium,17:35,,North Melbourne,,Fremantle,,,zerohanger
+2027R1206,2027,R12,6,2027-06-06,Docklands,15:15,,Essendon,,St Kilda,,,zerohanger
+2027R1207,2027,R12,7,2027-06-06,Perth Stadium,18:10,,West Coast,,Carlton,,,zerohanger
+2027R1301,2027,R13,1,2027-06-10,Adelaide Oval,19:00,,Adelaide,,Hawthorn,,,zerohanger
+2027R1302,2027,R13,2,2027-06-11,Kardinia Park,19:40,,Geelong,,Brisbane,,,zerohanger
+2027R1303,2027,R13,3,2027-06-12,Carrara,13:15,,Gold Coast,,Port Adelaide,,,zerohanger
+2027R1304,2027,R13,4,2027-06-12,Docklands,16:15,,Richmond,,Greater Western Sydney,,,zerohanger
+2027R1305,2027,R13,5,2027-06-12,Perth Stadium,17:35,,West Coast,,Western Bulldogs,,,zerohanger
+2027R1306,2027,R13,6,2027-06-13,S.C.G.,15:15,,Sydney,,St Kilda,,,zerohanger
+2027R1307,2027,R13,7,2027-06-13,M.C.G.,19:20,,Carlton,,Essendon,,,zerohanger
+2027R1308,2027,R13,8,2027-06-14,M.C.G.,15:15,,Melbourne,,Collingwood,,,zerohanger
+2027R1401,2027,R14,1,2027-06-17,M.C.G.,19:30,,Hawthorn,,Fremantle,,,zerohanger
+2027R1402,2027,R14,2,2027-06-18,Docklands,19:40,,Western Bulldogs,,Geelong,,,zerohanger
+2027R1403,2027,R14,3,2027-06-19,Adelaide Oval,13:05,,Port Adelaide,,Sydney,,,zerohanger
+2027R1404,2027,R14,4,2027-06-19,Gabba,16:35,,Brisbane,,Richmond,,,zerohanger
+2027R1405,2027,R14,5,2027-06-19,Docklands,19:35,,Essendon,,North Melbourne,,,zerohanger
+2027R1406,2027,R14,6,2027-06-20,Adelaide Oval,14:45,,Adelaide,,Melbourne,,,zerohanger
+2027R1407,2027,R14,7,2027-06-20,Sydney Showground,17:10,,Greater Western Sydney,,Gold Coast,,,zerohanger
+2027R1501,2027,R15,1,2027-06-24,Perth Stadium,18:10,,Fremantle,,Geelong,,,zerohanger
+2027R1502,2027,R15,2,2027-06-25,S.C.G.,19:40,,Sydney,,Brisbane,,,zerohanger
+2027R1503,2027,R15,3,2027-06-26,M.C.G.,13:15,,Richmond,,West Coast,,,zerohanger
+2027R1504,2027,R15,4,2027-06-26,Adelaide Oval,15:45,,Adelaide,,North Melbourne,,,zerohanger
+2027R1505,2027,R15,5,2027-06-26,Carrara,19:35,,Gold Coast,,Collingwood,,,zerohanger
+2027R1506,2027,R15,6,2027-06-27,Docklands,15:15,,St Kilda,,Carlton,,,zerohanger
+2027R1507,2027,R15,7,2027-06-27,Manuka Oval,17:10,,Greater Western Sydney,,Port Adelaide,,,zerohanger
+2027R1601,2027,R16,1,2027-07-01,Gabba,19:30,,Brisbane,,Fremantle,,,zerohanger
+2027R1602,2027,R16,2,2027-07-02,S.C.G.,19:40,,Sydney,,Melbourne,,,zerohanger
+2027R1603,2027,R16,3,2027-07-02,Perth Stadium,18:10,,West Coast,,Adelaide,,,zerohanger
+2027R1604,2027,R16,4,2027-07-03,Adelaide Oval,13:05,,Port Adelaide,,Hawthorn,,,zerohanger
+2027R1605,2027,R16,5,2027-07-03,Kardinia Park,16:15,,Geelong,,Gold Coast,,,zerohanger
+2027R1606,2027,R16,6,2027-07-03,M.C.G.,16:35,,Collingwood,,Greater Western Sydney,,,zerohanger
+2027R1607,2027,R16,7,2027-07-03,Docklands,19:35,,Carlton,,North Melbourne,,,zerohanger
+2027R1608,2027,R16,8,2027-07-04,Perth Stadium,13:15,,Essendon,,Richmond,,,zerohanger
+2027R1609,2027,R16,9,2027-07-04,Docklands,17:10,,St Kilda,,Western Bulldogs,,,zerohanger
+2027R1701,2027,R17,1,,Adelaide Oval,,,Adelaide,,St Kilda,,,zerohanger
+2027R1702,2027,R17,2,,M.C.G.,,,Collingwood,,Brisbane,,,zerohanger
+2027R1703,2027,R17,3,,Perth Stadium,,,Fremantle,,Richmond,,,zerohanger
+2027R1704,2027,R17,4,,Carrara,,,Gold Coast,,Western Bulldogs,,,zerohanger
+2027R1705,2027,R17,5,,Sydney Showground,,,Greater Western Sydney,,Carlton,,,zerohanger
+2027R1706,2027,R17,6,,M.C.G.,,,Hawthorn,,Geelong,,,zerohanger
+2027R1707,2027,R17,7,,Docklands,,,Melbourne,,Port Adelaide,,,zerohanger
+2027R1708,2027,R17,8,,Docklands,,,North Melbourne,,Sydney,,,zerohanger
+2027R1709,2027,R17,9,,Perth Stadium,,,West Coast,,Essendon,,,zerohanger
+2027R1801,2027,R18,1,,Gabba,,,Brisbane,,North Melbourne,,,zerohanger
+2027R1802,2027,R18,2,,M.C.G.,,,Carlton,,Melbourne,,,zerohanger
+2027R1803,2027,R18,3,,M.C.G.,,,Collingwood,,Geelong,,,zerohanger
+2027R1804,2027,R18,4,,Docklands,,,Essendon,,Greater Western Sydney,,,zerohanger
+2027R1805,2027,R18,5,,York Park,,,Hawthorn,,Gold Coast,,,zerohanger
+2027R1806,2027,R18,6,,Adelaide Oval,,,Port Adelaide,,Fremantle,,,zerohanger
+2027R1807,2027,R18,7,,M.C.G.,,,Richmond,,St Kilda,,,zerohanger
+2027R1808,2027,R18,8,,S.C.G.,,,Sydney,,West Coast,,,zerohanger
+2027R1809,2027,R18,9,,Docklands,,,Western Bulldogs,,Adelaide,,,zerohanger
+2027R1901,2027,R19,1,,Adelaide Oval,,,Adelaide,,Port Adelaide,,,zerohanger
+2027R1902,2027,R19,2,,M.C.G.,,,Essendon,,Collingwood,,,zerohanger
+2027R1903,2027,R19,3,,Kardinia Park,,,Geelong,,Carlton,,,zerohanger
+2027R1904,2027,R19,4,,Carrara,,,Gold Coast,,St Kilda,,,zerohanger
+2027R1905,2027,R19,5,,Sydney Showground,,,Greater Western Sydney,,Melbourne,,,zerohanger
+2027R1906,2027,R19,6,,Docklands,,,North Melbourne,,Hawthorn,,,zerohanger
+2027R1907,2027,R19,7,,M.C.G.,,,Richmond,,Sydney,,,zerohanger
+2027R1908,2027,R19,8,,Perth Stadium,,,West Coast,,Fremantle,,,zerohanger
+2027R1909,2027,R19,9,,Docklands,,,Western Bulldogs,,Brisbane,,,zerohanger
+2027R2001,2027,R20,1,,Gabba,,,Brisbane,,Essendon,,,zerohanger
+2027R2002,2027,R20,2,,Docklands,,,Carlton,,Adelaide,,,zerohanger
+2027R2003,2027,R20,3,,Perth Stadium,,,Fremantle,,Collingwood,,,zerohanger
+2027R2004,2027,R20,4,,M.C.G.,,,Melbourne,,Hawthorn,,,zerohanger
+2027R2005,2027,R20,5,,Docklands,,,North Melbourne,,Richmond,,,zerohanger
+2027R2006,2027,R20,6,,Adelaide Oval,,,Port Adelaide,,West Coast,,,zerohanger
+2027R2007,2027,R20,7,,Docklands,,,St Kilda,,Geelong,,,zerohanger
+2027R2008,2027,R20,8,,S.C.G.,,,Sydney,,Gold Coast,,,zerohanger
+2027R2009,2027,R20,9,,Eureka Stadium,,,Western Bulldogs,,Greater Western Sydney,,,zerohanger
+2027R2101,2027,R21,1,,Adelaide Oval,,,Adelaide,,Richmond,,,zerohanger
+2027R2102,2027,R21,2,,M.C.G.,,,Collingwood,,Carlton,,,zerohanger
+2027R2103,2027,R21,3,,Docklands,,,Essendon,,Western Bulldogs,,,zerohanger
+2027R2104,2027,R21,4,,Kardinia Park,,,Geelong,,Port Adelaide,,,zerohanger
+2027R2105,2027,R21,5,,Carrara,,,Gold Coast,,Fremantle,,,zerohanger
+2027R2106,2027,R21,6,,Sydney Showground,,,Greater Western Sydney,,North Melbourne,,,zerohanger
+2027R2107,2027,R21,7,,York Park,,,Hawthorn,,Sydney,,,zerohanger
+2027R2108,2027,R21,8,,Docklands,,,St Kilda,,Brisbane,,,zerohanger
+2027R2109,2027,R21,9,,Perth Stadium,,,West Coast,,Melbourne,,,zerohanger
+2027R2201,2027,R22,1,,Gabba,,,Brisbane,,Geelong,,,zerohanger
+2027R2202,2027,R22,2,,M.C.G.,,,Collingwood,,Adelaide,,,zerohanger
+2027R2203,2027,R22,3,,Perth Stadium,,,Fremantle,,Greater Western Sydney,,,zerohanger
+2027R2204,2027,R22,4,,M.C.G.,,,Melbourne,,Western Bulldogs,,,zerohanger
+2027R2205,2027,R22,5,,Docklands,,,North Melbourne,,Gold Coast,,,zerohanger
+2027R2206,2027,R22,6,,Adelaide Oval,,,Port Adelaide,,Essendon,,,zerohanger
+2027R2207,2027,R22,7,,M.C.G.,,,Richmond,,Hawthorn,,,zerohanger
+2027R2208,2027,R22,8,,Docklands,,,St Kilda,,West Coast,,,zerohanger
+2027R2209,2027,R22,9,,S.C.G.,,,Sydney,,Carlton,,,zerohanger
+2027R2301,2027,R23,1,,Adelaide Oval,,,Adelaide,,Fremantle,,,zerohanger
+2027R2302,2027,R23,2,,M.C.G.,,,Carlton,,Port Adelaide,,,zerohanger
+2027R2303,2027,R23,3,,Docklands,,,Collingwood,,St Kilda,,,zerohanger
+2027R2304,2027,R23,4,,Kardinia Park,,,Geelong,,Essendon,,,zerohanger
+2027R2305,2027,R23,5,,Carrara,,,Gold Coast,,Brisbane,,,zerohanger
+2027R2306,2027,R23,6,,Sydney Showground,,,Greater Western Sydney,,Sydney,,,zerohanger
+2027R2307,2027,R23,7,,Docklands,,,North Melbourne,,Melbourne,,,zerohanger
+2027R2308,2027,R23,8,,Perth Stadium,,,West Coast,,Hawthorn,,,zerohanger
+2027R2309,2027,R23,9,,Docklands,,,Western Bulldogs,,Richmond,,,zerohanger
+2027R2401,2027,R24,1,,Docklands,,,Carlton,,Greater Western Sydney,,,zerohanger
+2027R2402,2027,R24,2,,Docklands,,,Essendon,,West Coast,,,zerohanger
+2027R2403,2027,R24,3,,Perth Stadium,,,Fremantle,,Sydney,,,zerohanger
+2027R2404,2027,R24,4,,Kardinia Park,,,Geelong,,Adelaide,,,zerohanger
+2027R2405,2027,R24,5,,M.C.G.,,,Hawthorn,,Western Bulldogs,,,zerohanger
+2027R2406,2027,R24,6,,M.C.G.,,,Melbourne,,Brisbane,,,zerohanger
+2027R2407,2027,R24,7,,Adelaide Oval,,,Port Adelaide,,Gold Coast,,,zerohanger
+2027R2408,2027,R24,8,,M.C.G.,,,Richmond,,Collingwood,,,zerohanger
+2027R2409,2027,R24,9,,Docklands,,,St Kilda,,North Melbourne,,,zerohanger

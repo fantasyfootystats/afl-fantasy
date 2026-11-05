@@ -13,6 +13,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW, SRC, OUT = ROOT / "data/raw", ROOT / "data/sources", ROOT / "data/clean"
+REF = ROOT / "data/reference"
+
+# validGames rule; TOG threshold will become per-game-version (Classic / WAFL / Shiva) once 2027 rules are known
+VALID_MIN_TOG = 25
 OUT.mkdir(parents=True, exist_ok=True)
 
 TEAM_FIX = {"Brisbane Lions": "Brisbane", "Kangaroos": "North Melbourne"}
@@ -266,10 +270,57 @@ def build_players(stats, new_ids):
 
 # --------------------------------------------------------------------------- valid games
 def build_valid(stats, games):
-    v = stats[(~stats.subs.isin(["On", "Off"])) & (stats.pctPlayed >= 25)]
+    v = stats[(~stats.subs.isin(["On", "Off"])) & (stats.pctPlayed >= VALID_MIN_TOG)]
     v = v.merge(games[["gameId", "venue", "date"]], on="gameId", how="left")
     return v[["gameId", "year", "round", "playerId", "displayName", "team", "opposition", "homeaway",
               "venue", "date", "pctPlayed", "fantasyScore"]]
+
+
+ZH_TEAMS = {"ADEL": "Adelaide", "BL": "Brisbane", "CARL": "Carlton", "COLL": "Collingwood", "ESS": "Essendon",
+            "FRE": "Fremantle", "GEEL": "Geelong", "GC": "Gold Coast", "GWS": "Greater Western Sydney",
+            "HAW": "Hawthorn", "MELB": "Melbourne", "NMFC": "North Melbourne", "PORT": "Port Adelaide",
+            "RICH": "Richmond", "STK": "St Kilda", "SYD": "Sydney", "WCE": "West Coast", "WB": "Western Bulldogs"}
+ZH_VENUES = ["SCG", "Optus Stadium", "MCG", "Adelaide Oval", "Marvel Stadium", "Gabba", "Corroboree Group Oval Manuka",
+             "People First Stadium", "GMHBA Stadium", "Barossa Park", "Norwood Oval", "TIO Traeger Park", "ENGIE Stadium",
+             "Mars Stadium", "Ninja Stadium", "UTAS Stadium", "TIO Stadium", "Hands Oval"]
+
+
+def venue_lookup():
+    v = pd.read_csv(REF / "venues.csv").fillna("")
+    alias = {}
+    for _, r in v.iterrows():
+        for a in [r.venue, *[x for x in r.aliases.split("|") if x]]:
+            alias[a.lower()] = r.venue
+    return v.set_index("venue"), alias
+
+
+def fixture_2027():
+    """2027 fixture (Zero Hanger, read 6 Nov 2026). Times are converted from UTC to venue-local, matching how
+    startTime is stored for earlier seasons. Rounds 17-24 had dates/times TBC when read."""
+    vinfo, alias = venue_lookup()
+    rows = []
+    for line in (SRC / "zerohanger_fixture_2027.txt").read_text().splitlines():
+        if line.startswith("#"):
+            continue
+        for tok in line.split():
+            rnd, vc, h, a, ko = tok.split(",")
+            venue = alias[ZH_VENUES[int(vc)].lower()]
+            dt = None
+            if ko:
+                utc = pd.Timestamp(f"2027-{ko[:2]}-{ko[2:4]} {ko[4:6]}:{ko[6:]}", tz="UTC")
+                dt = utc.tz_convert(vinfo.at[venue, "timezone"])
+            rows.append({"round": int(rnd), "venue": venue, "homeTeam": ZH_TEAMS[h], "awayTeam": ZH_TEAMS[a],
+                         "kickoffUtc": utc if ko else pd.NaT, "local": dt})
+    f = pd.DataFrame(rows)
+    f = f.sort_values(["round", "kickoffUtc"], kind="stable", na_position="last")
+    f["game"] = f.groupby("round").cumcount() + 1
+    f["year"] = 2027
+    f["gameId"] = "2027R" + f["round"].map("{:02d}".format) + f.game.map("{:02d}".format)
+    f["date"] = f.local.map(lambda d: d.strftime("%Y-%m-%d") if d is not None else None)
+    f["startTime"] = f.local.map(lambda d: d.strftime("%H:%M") if d is not None else None)
+    f["round"] = "R" + f["round"].map("{:02d}".format)
+    f["source"] = "zerohanger"
+    return f[["gameId", "year", "round", "game", "date", "venue", "startTime", "homeTeam", "awayTeam", "source"]]
 
 
 def main():
@@ -277,6 +328,10 @@ def main():
     stats, new_ids = build_stats(games)
     players = build_players(stats, new_ids)
     valid = build_valid(stats, games)
+    games = pd.concat([games, fixture_2027()], ignore_index=True)
+    _, alias = venue_lookup()
+    unknown = set(games.venue.str.lower()) - set(alias)
+    assert not unknown, f"venues missing from data/reference/venues.csv: {unknown}"
 
     legacy = pd.read_csv(RAW / "validGames_2026.csv", low_memory=False)
     legacy["playerId"] = fix_id(legacy.playerId)
