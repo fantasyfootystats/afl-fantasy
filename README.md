@@ -24,7 +24,7 @@ Never edit `data/clean` by hand; fix the inputs or the build and rerun.
 ## Clean tables
 
 - **games** — every regular-season game 2005–2027. `gameId` = `YYYYRrrgg`. `startTime` is venue-local. 2027 rounds 17–24 have no date/time yet (TBC when read). No finals.
-- **stats** — one row per player per game, regular season, 2005–2026. Full league for every season. `subs` is On/Off (2011–15 and 2021–25). 2020 is scaled up from 16-minute quarters.
+- **stats** — one row per player per game, regular season, 2005–2026. Full league for every season. `subs` is On/Off (2011–15 and 2021–25). In 2023–25 Matt also marked "Off" for players who left injured and didn't return (about 70 a season), so treat Off as "didn't finish". 2020 is scaled up from 16-minute quarters.
 - **validGames** — stats filtered by: no sub on/off, `pctPlayed >= VALID_MIN_TOG` (25, set in `build.py`). All players, including retired. To become per game version (Classic / WAFL / Shiva) once 2027 rules are set.
 - **validGames_legacy** — Matt's original validGames for comparison (mostly current players, mixed historical rules).
 - **players** — every player in stats plus undebuted squad players (blank `playerId`). Matt's columns kept; adds `firstSeason`, `lastSeason`, `team2027`, `status2027`, `active2027`.
@@ -53,3 +53,5 @@ Never edit `data/clean` by hand; fix the inputs or the build and rerun.
 - 2027 rounds 17–24 dates/times once confirmed.
 - Team scores and attendance missing for 2023–2026.
 - Per-game-version valid rules (Classic / WAFL / Shiva).
+- A consistent injury / didn't-finish flag for projections, separate from subs.
+- Weekly 2027 updates from DFS Australia downloads (adds centre bounce attendances and kick-ins), cross-checked against AFL Tables.
