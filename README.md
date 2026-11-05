@@ -7,6 +7,7 @@ Games played: Classic (fantasy.afl.com.au), WAFL (draft league), Shiva (keeperfa
 
 ```
 python3 scripts/build.py   # data/raw + data/sources + data/reference -> data/clean
+python3 scripts/dfs.py     # DFS Australia pre-season sheets -> dfs_preseason, dfs_other_leagues
 python3 scripts/check.py   # integrity checks
 ```
 
@@ -17,7 +18,7 @@ Never edit `data/clean` by hand; fix the inputs or the build and rerun.
 | Folder | What's in it |
 |---|---|
 | `data/raw/` | Matt's master exports as of end of 2026, untouched |
-| `data/sources/` | Outside data used to fill gaps (AFL Tables via the [AFL-Data-Analysis](https://github.com/akareen/AFL-Data-Analysis) scrape, AFL Tables 2026 Opening Round pages, Zero Hanger 2027 fixture) |
+| `data/sources/` | Outside data: `dfs/` DFS Australia AFL Fantasy spreadsheets 2023–26; AFL Tables via the [AFL-Data-Analysis](https://github.com/akareen/AFL-Data-Analysis) scrape, AFL Tables 2026 Opening Round pages, Zero Hanger 2027 fixture) |
 | `data/reference/` | Hand-maintained lookups: `venues.csv` (canonical venue names, sponsor aliases, timezones), `list_changes_2027.csv` |
 | `data/clean/` | The tables to use |
 
@@ -29,6 +30,8 @@ Never edit `data/clean` by hand; fix the inputs or the build and rerun.
 - **validGames_legacy** — Matt's original validGames for comparison (mostly current players, mixed historical rules).
 - **players** — every player in stats plus undebuted squad players (blank `playerId`). Matt's columns kept; adds `firstSeason`, `lastSeason`, `team2027`, `status2027`, `active2027`.
 - **player_id_aliases** — old IDs that now point to another ID.
+- **dfs_preseason** — DFS Australia AFL Fantasy pre-season sheets 2023–2026: one row per player per season with starting price, ownership, position, Champion Data ID, and the previous AFL season (games incl. finals, average, regular-season average, CBA%, PPM). DFS excludes games under 50% TOG. Matched to playerId for every player with AFL games (regular-season averages agree with stats 99.96%).
+- **dfs_other_leagues** — previous-season averages in VFL, WAFL, SANFL, SANFL Reserves/U18s and NAB/Coates Talent League (2022–2025), one row per player per league per year.
 
 ## Conventions
 
