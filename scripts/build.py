@@ -323,10 +323,40 @@ def fixture_2027():
     return f[["gameId", "year", "round", "game", "date", "venue", "startTime", "homeTeam", "awayTeam", "source"]]
 
 
+def apply_list_changes(p):
+    """2027 list changes (AFL.com.au retirements/delistings table + trade tracker, read 6 Nov 2026).
+    Adds team2027 / status2027 / active2027; Matt's original team and active columns are left as they were."""
+    lc = pd.read_csv(REF / "list_changes_2027.csv").fillna("")
+    sp = p.displayName.str.split(", ", n=1)
+    last, first = sp.str[0].map(norm), sp.str[1].fillna("").map(norm)
+    p["team2027"] = p.team.where(p.active == True)
+    p["status2027"] = p.active.map({True: "listed"}).astype("object")
+    unmatched = []
+    for _, r in lc.iterrows():
+        fn, ln = r.player.replace(" jnr", "").split(" ", 1)
+        c = p[(last == norm(ln)) & (p.team == r.fromTeam)]
+        if len(c) > 1 and (c.active == True).sum() >= 1:
+            c = c[c.active == True]
+        if len(c) > 1:
+            c = c[first[c.index].str[:1] == norm(fn)[:1]]
+        if len(c) > 1:
+            c = c[first[c.index].str[:3] == norm(fn)[:3]]
+        if len(c) != 1:
+            unmatched.append(r.player)
+            continue
+        i = c.index[0]
+        status = r.change + (" (redraft pledged)" if r.redraftPledged else "")
+        p.at[i, "status2027"] = status
+        p.at[i, "team2027"] = r.toTeam or (r.fromTeam if r.redraftPledged else None)
+    p["active2027"] = p.team2027.notna()
+    print(f"list changes applied: {len(lc) - len(unmatched)}; not in players table (no AFL games): {unmatched}")
+    return p
+
+
 def main():
     games = build_games()
     stats, new_ids = build_stats(games)
-    players = build_players(stats, new_ids)
+    players = apply_list_changes(build_players(stats, new_ids))
     valid = build_valid(stats, games)
     games = pd.concat([games, fixture_2027()], ignore_index=True)
     _, alias = venue_lookup()
