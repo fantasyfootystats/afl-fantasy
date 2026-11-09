@@ -83,15 +83,36 @@ def young(v, s, players, listed):
     pl = hist[hist.played == 1]
     reg = Ridge(alpha=1.0).fit(YP.design_avg(pl), pl.actual, sample_weight=pl.games)
 
-    d = YP.draft_pool(drafts, v, N)
-    # undebuted draftees have no playerId: match to the 2027 list by "Last, First"
-    name = d.player.str.split(" ", n=1).map(lambda x: f"{x[1]}, {x[0]}" if len(x) == 2 else x[0])
-    undebuted = listed[listed.playerId.isna()].set_index("displayName")
-    d["onList"] = d.playerId.isin(listed.playerId.dropna()) | (d.playerId.isna() & name.isin(undebuted.index))
-    d = d[d.onList].copy()
-    d["displayName"] = name
+    d = YP.draft_pool(drafts, v, N, max_years=8)   # late developers: any draftee still listed with < 5 games
+    d["displayName"] = d.player.str.split(" ", n=1).map(lambda x: f"{x[1]}, {x[0]}" if len(x) == 2 else x[0])
+    # undebuted draftees have no playerId: match to the 2027 list on surname + first 3 letters
+    # of first name (handles Nick/Nicholas, Mitch/Mitchell, Max/Maximus, Will/William)
+    undebuted = listed[listed.playerId.isna()].copy()
+    undebuted["key"] = undebuted.displayName.map(name_key)
+    d["key"] = d.displayName.map(name_key)
+    on_list = d.playerId.isin(listed.playerId.dropna()) | (d.playerId.isna() & d.key.isin(undebuted.key))
+    d = d[on_list].copy()
+    by_key = undebuted.drop_duplicates("key").set_index("key")
+    d.loc[d.playerId.isna(), "displayName"] = d.key.map(by_key.displayName)
+    debuted = listed.dropna(subset=["playerId"]).set_index("playerId")
+    d.loc[d.playerId.notna(), "displayName"] = d.playerId.map(debuted.displayName)   # list spelling, not draft spelling
     d["team2027"] = d.playerId.map(listed.dropna(subset=["playerId"]).set_index("playerId").team2027)
-    d["team2027"] = d.team2027.fillna(d.displayName.map(undebuted.team2027))
+    d["team2027"] = d.team2027.fillna(d.key.map(by_key.team2027))
+
+    # listed players with < 5 valid games who aren't in any draft list (Category B, SSP, supplementary):
+    # treated as a late rookie pick
+    prior = v.groupby("playerId").fantasyScore.agg(prior_games="size", prior_avg="mean")
+    covered = set(d.playerId.dropna().astype("int64")) | set(d.displayName)
+    rest = listed[~listed.playerId.isin(list(covered)) & ~listed.displayName.isin(covered)].copy()
+    rest["prior_games"] = rest.playerId.map(prior.prior_games).fillna(0)
+    rest = rest[rest.prior_games < YP.MIN_GAMES]
+    rest = rest.assign(pick=70, draftType="rookie", fromLevel="other", club=rest.team2027,
+                       prior_avg=rest.playerId.map(prior.prior_avg),
+                       years_since=(N - rest.firstSeason.fillna(N - 1)).clip(lower=1),
+                       draftYear=N - 1, player=rest.displayName, undrafted=True)
+    rest["playerId"] = rest.playerId.astype("float")
+    d = pd.concat([d.assign(undrafted=False), rest[d.columns.intersection(rest.columns).tolist() + ["undrafted"]]],
+                  ignore_index=True)
     tN = listed.dropna(subset=["playerId"])[["playerId", "team2027"]].rename(columns={"team2027": "team"})
     tN["playerId"] = tN.playerId.astype("int64")
     ms = F.market_share_features(s, N, tN).merge(tN, on="playerId")
@@ -104,6 +125,18 @@ def young(v, s, players, listed):
     d["exp_games"] = (d.p_play * 12).round(1)     # rough: a young player who plays gets ~12 games
     d["group"] = "young"
     return d
+
+
+def name_key(display):
+    last, _, first = display.partition(", ")
+    return F_norm(last) + "|" + F_norm(first)[:3]
+
+
+def F_norm(x):
+    import re
+    import unicodedata
+    x = unicodedata.normalize("NFKD", str(x)).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z]", "", x)
 
 
 def main():

@@ -25,9 +25,9 @@ TEST_YEARS = range(2012, 2027)
 MIN_GAMES = 5
 
 
-def draft_pool(drafts, v, N):
-    """Each draftee's most recent draft before season N, if within 3 drafts and < 5 valid games before N."""
-    d = drafts[(drafts.draftYear <= N - 1) & (drafts.draftYear >= N - 3)
+def draft_pool(drafts, v, N, max_years=3):
+    """Each draftee's most recent draft before season N, if within max_years drafts and < 5 valid games before N."""
+    d = drafts[(drafts.draftYear <= N - 1) & (drafts.draftYear >= N - max_years)
                & (drafts.fromLevel != "AFL (re-listed)")].copy()
     d["key"] = d.playerId.astype("Int64").astype(str).where(d.playerId.notna(), d.player + "|" + d.draftYear.astype(str))
     d = d.sort_values("draftYear").drop_duplicates("key", keep="last")
@@ -46,7 +46,7 @@ def design(d):
     x["national"] = (d.draftType == "national").astype(int)
     x["rookie"] = d.draftType.str.contains("rookie").astype(int)
     x["state_league"] = (d.fromLevel == "state league").astype(int)
-    x["years_since"] = d.years_since
+    x["years_since"] = d.years_since.clip(upper=3)   # model is trained on drafts up to 3 years old
     x["yr1"] = (d.years_since == 1).astype(int)
     x["prior_games"] = d.prior_games
     x["prior_avg"] = d.prior_avg.fillna(0)
