@@ -32,6 +32,22 @@ def norm(x):
     return re.sub(r"[^a-z]", "", x)
 
 
+NICKNAMES = {frozenset(p) for p in [
+    ("jack", "john"), ("jack", "jackson"), ("john", "jonathon"), ("john", "jonathan"), ("jon", "jonathon"),
+    ("bill", "william"), ("will", "william"), ("ted", "edward"), ("ned", "edward"), ("ed", "edward"),
+    ("bob", "robert"), ("rob", "robert"), ("jim", "james"), ("jimmy", "james"), ("nat", "nathan"),
+    ("tom", "thomas"), ("tommy", "thomas"), ("zac", "zachary"), ("zak", "zachary"), ("zach", "zachary"),
+    ("matt", "matthew"), ("dan", "daniel"), ("danny", "daniel"), ("sam", "samuel"), ("ben", "benjamin"),
+    ("alex", "alexander"), ("max", "maximus"), ("max", "maxwell"), ("nick", "nicholas"), ("mitch", "mitchell"),
+    ("josh", "joshua"), ("lachie", "lachlan"), ("cam", "cameron"), ("pat", "patrick"), ("brad", "bradley"),
+]}
+
+
+def first_names_match(a, b):
+    """Draft-list first name vs AFL first name (both normalised)."""
+    return a[:3] == b[:3] or a.startswith(b) or b.startswith(a) or frozenset((a, b)) in NICKNAMES
+
+
 def clean_name(n):
     n = re.sub(r"(NSW Scholarship elevation|Queensland priority selection|\[nb \d+\]|\(F/S\)|\+)", "", n)
     n = re.sub(r"\s+x$", "", n.strip())
@@ -78,7 +94,9 @@ def main():
         c = seasons[(seasons.last_n == last) | (seasons.last_n == norm(toks[-1]))]
         # must have played after this draft, and (for a first-time pick) not long before it
         c = c[(c["last"] >= r.firstSeason)]
-        c = c[c.first_n.str[:1] == first[:1]]
+        # first names must be compatible, not just share an initial (Logan vs Lachlan Smith,
+        # Scott vs Sam Simpson): same first 3 letters, one a prefix of the other, or a nickname pair
+        c = c[c.first_n.map(lambda f: first_names_match(first, f)).astype(bool)]
         # namesakes: never played for the drafting club AND either had already played AFL elsewhere
         # before this pick (and it isn't a re-listing) or would have been an implausible age at the
         # draft (e.g. the 2013 Melbourne and 2025 Sydney Max King picks are not St Kilda's Max King).

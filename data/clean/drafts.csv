@@ -232,7 +232,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2006,rookie,10,Collingwood,Sharrod Wellingham,WAFL,2007,state league,2008879314,True,18.4
 2006,rookie,11,Western Bulldogs,Gavin Hughes,SANFL,2007,state league,,True,
 2006,rookie,12,Melbourne,Daniel Hayes,TACCup,2007,junior,,True,
-2006,rookie,13,Fremantle,Chris Smith,QAFL,2007,state league,2012833342,True,
+2006,rookie,13,Fremantle,Chris Smith,QAFL,2007,state league,,True,
 2006,rookie,14,Adelaide,Andrew McIntyre,SANFL,2007,state league,,True,
 2006,rookie,15,Sydney,Nick Smith,TACCup,2007,junior,2008835971,True,18.5
 2006,rookie,16,West Coast,Jamie McNamara,WAFL,2007,state league,2007210101,True,18.7
@@ -325,7 +325,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2007,national,41,Brisbane,James Polkinghorne,TACCup,2008,junior,2008801314,True,18.8
 2007,national,42,St Kilda,Jack Steven,TACCup,2008,junior,2009836029,True,17.7
 2007,national,43,Western Bulldogs,Easton Wood,HFNL,2008,other,2009879614,True,18.2
-2007,national,44,Geelong,Scott Simpson,TACCup,2008,junior,2017831987,False,9.4
+2007,national,44,Geelong,Scott Simpson,TACCup,2008,junior,,True,
 2007,national,45,Hawthorn,Stuart Dew,AFL,2008,AFL (re-listed),1997150701,False,28.3
 2007,national,46,Carlton,Dennis Armfield,WAFL,2008,state league,2008659471,True,20.9
 2007,national,47,Collingwood,Toby Thoolen,TACCup,2008,junior,,True,
@@ -385,7 +385,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2007,rookie,24,St Kilda,Luke Miles,,2008,other,2010210201,True,21.1
 2007,rookie,25,Adelaide,Jared Petrenko,,2008,other,2009801400,True,17.9
 2007,rookie,26,Sydney,Brendan Murphy,,2008,other,,True,
-2007,rookie,27,Hawthorn,Timothy Walsh,,2008,other,2012879079,True,
+2007,rookie,27,Hawthorn,Timothy Walsh,,2008,other,,True,
 2007,rookie,28,West Coast,Ashley Arrowsmith,,2008,other,,True,
 2007,rookie,29,Collingwood,Kevin Dyas,,2008,other,,True,
 2007,rookie,30,North Melbourne,Cruize Garlett,,2008,other,2009712142,True,18.7
@@ -543,7 +543,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2008,rookie,37,Carlton,Greg Bentley,,2009,other,2006190501,False,21.6
 2008,rookie,39,Richmond,Andrew Browne,,2009,other,2009010101,True,18.4
 2008,rookie,40,North Melbourne,Ben Speight,,2009,other,2010170501,True,18.6
-2008,rookie,42,Collingwood,Johnny Bennell,,2009,other,2009665819,False,18.5
+2008,rookie,42,Collingwood,Johnny Bennell,,2009,other,,True,
 2008,rookie,43,Sydney,Kyle Coney,,2009,other,,True,
 2008,rookie,44,St Kilda,Brad Howard,,2009,other,,True,
 2008,rookie,46,Geelong,Tom Allwright,,2009,other,,True,
@@ -619,7 +619,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2009,national,38,Sydney,Sam Reid,TACCup,2010,junior,2010829216,True,17.9
 2009,national,39,Hawthorn,Sam Grimley,TACCup,2010,junior,2013717372,True,
 2009,national,40,Geelong,Allen Christensen,TACCup,2010,junior,2011676773,True,18.5
-2009,national,41,North Melbourne,Ayden Kennedy,TACCup,2010,junior,2012758114,True,17.4
+2009,national,41,North Melbourne,Ayden Kennedy,TACCup,2010,junior,,True,
 2009,national,42,Geelong,Nathan Vardy,TACCup,2010,junior,2011864351,True,18.4
 2009,national,43,Carlton,Marcus Davies,TSL,2010,state league,2010686160,True,18.6
 2009,national,44,Richmond,Matthew Dea,TACCup,2010,junior,2010684385,True,18.1
@@ -712,7 +712,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2009,rookie,34,Collingwood,Jack Carter,SANFL,2010,state league,,True,
 2009,rookie,35,Western Bulldogs,Andrew Hooper,TACCup,2010,junior,2010726025,True,18.9
 2009,rookie,36,St Kilda,Daniel Archer,TSL,2010,state league,2011020101,True,18.1
-2009,rookie,37,Geelong,Ben Johnson,VFL,2010,state league,2014746616,True,
+2009,rookie,37,Geelong,Ben Johnson,VFL,2010,state league,,True,
 2009,rookie,38,Richmond,Relton Roberts,NTFL,2010,state league,2010010102,True,23.7
 2009,rookie,40,West Coast,Ashton Hams,WAFL,2010,state league,2010722790,True,23.2
 2009,rookie,41,Port Adelaide,Cameron Cloke,AFL,2010,AFL (re-listed),2004050601,False,24.9
@@ -722,7 +722,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2009,rookie,46,Adelaide,Matthew Jaensch,SANFL,2010,state league,2010744089,True,20.2
 2009,rookie,47,Collingwood,Seamus McNamara,USA,2010,other,,True,
 2009,rookie,48,Western Bulldogs,Matthew Panos,SANFL,2010,state league,,True,
-2009,rookie,49,St Kilda,Jarryd Allen,AFL,2010,AFL (re-listed),2012659703,False,
+2009,rookie,49,St Kilda,Jarryd Allen,AFL,2010,AFL (re-listed),,True,
 2009,rookie,50,Geelong,James Podsiadly,VFL,2010,state league,2010807356,True,28.2
 2009,rookie,51,Richmond,Nicholas Westhoff,SANFL,2010,state league,,True,
 2009,rookie,53,West Coast,Jarrad Oakley-Nicholls,AFL,2010,AFL (re-listed),,True,
@@ -740,7 +740,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2009,rookie,66,Carlton,Joshua Donaldson,WAFL,2010,state league,,True,
 2009,rookie,67,Brisbane,Niall McKeever,GAA,2010,other,2011771265,True,20.8
 2009,rookie,68,Western Bulldogs,Patrick Rose,VFL,2010,state league,,True,
-2009,rookie,69,St Kilda,Tommy Walsh,GAA,2010,other,2012879079,False,
+2009,rookie,69,St Kilda,Tommy Walsh,GAA,2010,other,2012879079,True,
 2009,rookie,70,Richmond,Jamie O'Reilly,GAA,2010,other,2010200302,True,21.6
 2009,rookie,71,Sydney,Nathan Gordon,SydneyAFL,2010,other,2011713166,True,19.8
 2009,rookie,72,Port Adelaide,Jordon Johns,BHFL,2010,other,,True,
@@ -874,7 +874,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2010,rookie,12,Essendon,Josh Jenkins,CMFL,2011,other,2012743763,True,
 2010,rookie,13,Brisbane,Brad Harvey,TACCup,2011,junior,,True,
 2010,rookie,14,Melbourne,Daniel Nicholson,VAFA,2011,other,2011784999,True,20.1
-2010,rookie,15,Adelaide,Timothy Milera,SANFL,2011,state league,2012773953,True,
+2010,rookie,15,Adelaide,Timothy Milera,SANFL,2011,state league,,True,
 2010,rookie,16,Port Adelaide,Tom Jonas,SANFL,2011,state league,2011746753,True,19.9
 2010,rookie,17,North Melbourne,Cameron Pedersen,VFL,2011,state league,2011801163,True,23.7
 2010,rookie,18,Carlton,Ed Curnow,VFL,2011,state league,2011679390,False,21.0
@@ -954,7 +954,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2011,national,14,Greater Western Sydney,Devon Smith,TACCup,2012,junior,2012833121,True,18.5
 2011,national,15,Richmond,Brandon Ellis,TACCup,2012,junior,2012694309,True,18.3
 2011,national,16,Fremantle,Tom Sheridan,TACCup,2012,junior,2012833453,True,
-2011,national,17,Western Bulldogs,Clay Smith,TACCup,2012,junior,2012833342,False,
+2011,national,17,Western Bulldogs,Clay Smith,TACCup,2012,junior,2012833342,True,
 2011,national,18,North Melbourne,Brad McKenzie,SANFL,2012,state league,2012773565,True,
 2011,national,19,Essendon,Elliott Kavanagh,TACCup,2012,junior,2012754326,True,
 2011,national,20,Fremantle,Hayden Crozier,TACCup,2012,junior,2012673943,True,17.9
@@ -1355,7 +1355,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2013,rookie,12,Carlton,Luke Reynolds,SANFL,2014,state league,,True,
 2013,rookie,13,Port Adelaide,Samuel Russell,TACCup,2014,junior,,True,
 2013,rookie,15,Geelong,James Toohey,TACCup,2014,junior,,True,
-2013,rookie,16,Fremantle,Michael Wood,WAFL,2014,state league,2014878237,False,20.2
+2013,rookie,16,Fremantle,Michael Wood,WAFL,2014,state league,,True,
 2013,rookie,17,Hawthorn,Dallas Willsmore,TACCup,2014,junior,2017875332,True,
 2013,rookie,19,Melbourne,Max King,TACCup,2014,junior,,True,
 2013,rookie,20,St Kilda,Maverick Weller,AFL,2014,AFL (re-listed),2011875794,False,21.8
@@ -1376,7 +1376,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2013,rookie,40,Adelaide,Jake Kelly,TACCup,2014,junior,2015754078,True,18.8
 2013,rookie,41,Essendon,Johnny Rayner,,2014,other,,True,
 2013,rookie,42,Richmond,Matt Thomas,AFL,2014,AFL (re-listed),2006845644,False,26.7
-2013,rookie,43,Carlton,Blaine Johnson,WAFL,2014,state league,2014746616,False,
+2013,rookie,43,Carlton,Blaine Johnson,WAFL,2014,state league,2014746616,True,
 2013,rookie,44,Port Adelaide,Brent Renouf,AFL,2014,AFL (re-listed),2008822700,False,25.6
 2013,rookie,45,Sydney,Patrick Mitchell,,2014,other,,True,
 2013,rookie,46,Geelong,Zachary Bates,SANFL,2014,state league,,True,
@@ -1518,7 +1518,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2014,rookie,48,Fremantle,Sean Hurley,GAA,2015,other,,True,
 2014,rookie,49,Geelong,Padraig Lucey,GAA,2015,other,,True,
 2014,rookie,50,North Melbourne,Max Warren,VFL,2015,state league,,True,
-2014,rookie,51,Port Adelaide,Johann Wagner,PortLincolnFL/SANFL,2015,other,2016877384,True,
+2014,rookie,51,Port Adelaide,Johann Wagner,PortLincolnFL/SANFL,2015,other,,True,
 2014,rookie,52,Sydney,Lewis Melican,TACCup,2015,junior,2017773724,True,18.1
 2014,rookie,53,Hawthorn,Lachlan Langford,APS,2015,junior,,True,
 2014,rookie,54,St Kilda,Adam Schneider,AFL,2015,AFL (re-listed),2003835745,False,30.5
@@ -1611,7 +1611,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2015,rookie,3,Gold Coast,Tom Keough,SANFL,2016,state league,,True,
 2015,rookie,4,Essendon,Gach Nyuon,TACCup,2016,junior,,True,
 2015,rookie,5,St Kilda,Nick O'Kearney,TACCup,2016,junior,,True,
-2015,rookie,6,Melbourne,Josh Wagner,NEAFL,2016,state league,2016877384,False,
+2015,rookie,6,Melbourne,Josh Wagner,NEAFL,2016,state league,2016877384,True,
 2015,rookie,7,Collingwood,Lachlan Keeffe,AFL,2016,AFL (re-listed),2011752234,False,25.6
 2015,rookie,8,Greater Western Sydney,Sam Reid,NEAFL,2016,state league,2008827999,False,26.0
 2015,rookie,9,Geelong,Jock Cornell,RFNL,2016,other,,True,
@@ -1645,7 +1645,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2015,rookie,37,Carlton,Matthew Korcheck,Pac-12,2016,other,,True,
 2015,rookie,38,Gold Coast,Ryan Davis,WAFL,2016,state league,2008686669,False,26.5
 2015,rookie,39,Essendon,Will Hams,AFL,2016,AFL (re-listed),2013725318,False,
-2015,rookie,40,St Kilda,Josh Saunders,AFL,2016,AFL (re-listed),2022230702,False,
+2015,rookie,40,St Kilda,Josh Saunders,AFL,2016,AFL (re-listed),,True,
 2015,rookie,41,Melbourne,Joel Smith,SEABL,2016,other,2017838949,True,19.7
 2015,rookie,42,Collingwood,Josh Thomas,AFL,2016,AFL (re-listed),2013847724,False,
 2015,rookie,44,Geelong,Tom Ruggles,VFL,2016,state league,2016822790,True,
@@ -1999,7 +1999,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2018,rookie,7,Adelaide,Kieran Strachan,VFL,2019,state league,2020831323,True,23.1
 2018,rookie,8,Essendon,Tom Jok,VFL,2019,state league,2019742146,True,
 2018,rookie,9,Port Adelaide,Tobin Cox,SANFL,2019,state league,,True,
-2018,rookie,10,North Melbourne,Tom McKenzie,TACCup,2019,junior,2011773387,False,26.6
+2018,rookie,10,North Melbourne,Tom McKenzie,TACCup,2019,junior,,True,
 2018,rookie,11,Geelong,Tom Atkins,VFL,2019,state league,2019659412,True,23.2
 2018,rookie,12,Sydney,Durak Tucker,WAFL,2019,state league,,True,
 2018,rookie,14,Hawthorn,Damon Greaves,WAFL,2019,state league,2020715132,True,
@@ -2100,7 +2100,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2019,national,55,Collingwood,Trey Ruscoe,WAFL,2020,state league,2020829408,True,18.1
 2019,national,56,Essendon,Ned Cahill,NABLeague,2020,junior,2020677029,True,
 2019,national,57,Hawthorn,Josh Morris,SANFL,2020,state league,2020772347,True,18.0
-2019,national,58,West Coast,Ben Johnson,WAFL,2020,state league,,True,
+2019,national,58,West Coast,Ben Johnson,WAFL,2020,state league,,False,
 2019,national,59,Brisbane,Jaxon Prior,WAFL,2020,state league,2021804686,True,18.5
 2019,national,60,Gold Coast,Jy Farrar,SANFL,2020,state league,2020702883,True,23.0
 2019,national,61,Fremantle,Michael Frederick,SANFL,2020,state league,2020708891,True,19.5
@@ -2633,7 +2633,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2024,national,68,Melbourne,Aidan Johnson,VFL,2025,state league,2025010905,True,24.7
 2024,national,69,Geelong,Keighton Matofai-Forbes,TalentLeague,2025,junior,,True,
 2024,national,70,Essendon,Zak Johnson,TalentLeague,2025,junior,2025120101,True,17.9
-2024,national,71,Greater Western Sydney,Logan Smith,AFLCanberra,2025,other,2026070103,False,19.1
+2024,national,71,Greater Western Sydney,Logan Smith,AFLCanberra,2025,other,,True,
 2024,pre-season,1,Hawthorn,Jack Gunston,AFL,2025,AFL (re-listed),2010713968,False,33.1
 2024,pre-season,2,Brisbane,Sam Day,AFL,2025,AFL (re-listed),2011685784,False,32.2
 2024,rookie,1,North Melbourne,Toby Pink,AFL,2025,AFL (re-listed),2024010403,False,26.3
@@ -2651,7 +2651,7 @@ draftYear,draftType,pick,club,player,draftedFrom,firstSeason,fromLevel,playerId,
 2024,rookie,15,Brisbane,Darragh Joyce,AFL,2025,AFL (re-listed),2018741884,False,27.6
 2024,rookie,16,Adelaide,Chris Burgess,AFL,2025,AFL (re-listed),2019661033,False,29.0
 2024,rookie,17,Gold Coast,Asher Eastham,TalentLeague,2025,junior,,True,
-2024,rookie,20,Collingwood,Ash Johnson,AFL,2025,AFL (re-listed),2025010905,False,24.7
+2024,rookie,20,Collingwood,Ash Johnson,AFL,2025,AFL (re-listed),,True,
 2024,rookie,22,Greater Western Sydney,Jacob Wehr,AFL,2025,AFL (re-listed),2022100701,False,26.4
 2024,rookie,23,Geelong,Patrick Retschko,TalentLeague,2025,junior,2026060701,True,18.7
 2024,rookie,25,Sydney,Ben Paton,AFL,2025,AFL (re-listed),2018802965,False,26.1
