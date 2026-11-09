@@ -66,6 +66,9 @@ def main():
     players = pd.read_csv(OUT / "players.csv", low_memory=False, usecols=["playerId", "dob"])
     seasons = stats.groupby(["playerId", "displayName"]).agg(first=("year", "min"), last=("year", "max")).reset_index()
     clubs = stats.groupby("playerId").team.agg(set)
+    dob = pd.to_datetime(players.dropna(subset=["playerId"]).drop_duplicates("playerId")
+                         .set_index("playerId").dob, errors="coerce")
+    dob_year = dob.dt.year + (dob.dt.dayofyear - 1) / 365.25
     sp = seasons.displayName.str.split(", ", n=1)
     seasons["last_n"], seasons["first_n"] = sp.str[0].map(norm), sp.str[1].fillna("").map(norm)
 
@@ -76,6 +79,15 @@ def main():
         # must have played after this draft, and (for a first-time pick) not long before it
         c = c[(c["last"] >= r.firstSeason)]
         c = c[c.first_n.str[:1] == first[:1]]
+        # namesakes: never played for the drafting club AND either had already played AFL elsewhere
+        # before this pick (and it isn't a re-listing) or would have been an implausible age at the
+        # draft (e.g. the 2013 Melbourne and 2025 Sydney Max King picks are not St Kilda's Max King).
+        # Late bloomers drafted and debuting years later elsewhere (Freeman, Menegola, Pink) stay linked.
+        at_club = c.playerId.map(lambda p: r.club in clubs[p])
+        played_before = (c["first"] < r.firstSeason) & (r.fromLevel != "AFL (re-listed)")
+        age = (r.draftYear + 11 / 12) - c.playerId.map(dob_year)
+        bad_age = ((age < 16.5) | (age > 32)) | (age.isna() & ((c["first"] - r.firstSeason) > 6))
+        c = c[at_club | ~(played_before | bad_age)]
         if c.playerId.nunique() > 1:
             c = c[c.first_n.str[:3] == first[:3]]
         if c.playerId.nunique() > 1:
