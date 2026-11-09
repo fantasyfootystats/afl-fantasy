@@ -1,7 +1,9 @@
 """Sense checks for player identity problems: namesakes merged into one ID, or one player split across IDs.
 
 Run after build.py / drafts.py:  python3 scripts/check_identities.py
-Writes reports/identity_checks.csv (one row per flag, for a human to review) and prints a summary.
+Writes reports/identity_checks.csv (one row per NEW flag, for a human to review) and prints a summary.
+Flags already confirmed correct live in data/reference/identity_confirmed.csv and are hidden; when a
+new flag is checked and found fine, copy its check / playerId / detail into that file.
 
 Merged namesakes (two players under one ID) show up as:
   - two clubs in the same season (no mid-season trades in the AFL; a late-season move is rare)
@@ -142,6 +144,15 @@ def main():
                  " / ".join(f"{x.gameId} {x.team} v {x.opposition}" for x in grp.itertuples()), "high")
 
     out = pd.DataFrame(flags)
+    # flags a human has already confirmed as correct (data/reference/identity_confirmed.csv) stay quiet
+    ok = pd.read_csv(ROOT / "data/reference/identity_confirmed.csv")
+    seen = out.set_index(["check", "playerId", "detail"]).index.isin(ok.set_index(["check", "playerId", "detail"]).index)
+    print(f"{seen.sum()} previously confirmed flags hidden (data/reference/identity_confirmed.csv)")
+    out = out[~seen]
+    if out.empty:
+        print("no new identity flags")
+        (OUT / "identity_checks.csv").unlink(missing_ok=True)
+        return
     order = {"high": 0, "medium": 1, "low": 2}
     out = out.sort_values(["severity", "check", "player"], key=lambda c: c.map(order) if c.name == "severity" else c)
     OUT.mkdir(exist_ok=True)
