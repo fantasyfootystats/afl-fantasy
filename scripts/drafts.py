@@ -16,6 +16,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC, OUT = ROOT / "data/sources/wikipedia/afl_drafts_2005_2025.txt", ROOT / "data/clean"
+LINKS = ROOT / "data/reference/draft_links.csv"
 
 CLUB = {"AD": "Adelaide", "BL": "Brisbane", "CA": "Carlton", "CW": "Collingwood", "ES": "Essendon",
         "FR": "Fremantle", "GE": "Geelong", "GC": "Gold Coast", "GW": "Greater Western Sydney", "HA": "Hawthorn",
@@ -92,8 +93,10 @@ def main():
         toks = [w for w in r.player.split() if not re.fullmatch(r"[A-Z]\.|Jn?r\.?", w)]
         first, last = norm(toks[0]), norm(" ".join(toks[1:]))
         c = seasons[(seasons.last_n == last) | (seasons.last_n == norm(toks[-1]))]
-        # must have played after this draft, and (for a first-time pick) not long before it
-        c = c[(c["last"] >= r.firstSeason)]
+        # must have played after this draft - except a re-listed AFL player, who may never play again
+        # (Shaun Edwards: delisted by Essendon, re-drafted by Sydney, no more games)
+        relisted = r.fromLevel == "AFL (re-listed)"
+        c = c[(c["last"] >= r.firstSeason) | (relisted & (c["last"] >= r.draftYear - 1))]
         # first names must be compatible, not just share an initial (Logan vs Lachlan Smith,
         # Scott vs Sam Simpson): same first 3 letters, one a prefix of the other, or a nickname pair
         c = c[c.first_n.map(lambda f: first_names_match(first, f)).astype(bool)]
@@ -106,6 +109,8 @@ def main():
         age = (r.draftYear + 11 / 12) - c.playerId.map(dob_year)
         bad_age = ((age < 16.5) | (age > 32)) | (age.isna() & ((c["first"] - r.firstSeason) > 6))
         c = c[at_club | ~(played_before | bad_age)]
+        if c.playerId.nunique() > 1 and (c.first_n == first).any():   # Shaun vs Shane: exact first name wins
+            c = c[c.first_n == first]
         if c.playerId.nunique() > 1:
             c = c[c.first_n.str[:3] == first[:3]]
         if c.playerId.nunique() > 1:
@@ -115,6 +120,12 @@ def main():
         return c.playerId.iloc[0] if c.playerId.nunique() == 1 else None
 
     d["playerId"] = d.apply(match, axis=1).astype("Int64")
+    # hand-checked corrections the rules can't make (data/reference/draft_links.csv; blank playerId = no AFL player)
+    fix = pd.read_csv(LINKS, dtype={"playerId": "Int64"})
+    key = ["draftYear", "draftType", "pick", "club"]
+    d = d.merge(fix[key + ["playerId"]].rename(columns={"playerId": "_fix"}).assign(_has=True), on=key, how="left")
+    d.loc[d._has.eq(True), "playerId"] = d._fix
+    d = d.drop(columns=["_fix", "_has"])
     # a pick of a player who had already played AFL before it is a re-listing, not career entry
     first_game = stats.groupby("playerId").year.min()
     d["playedBefore"] = d.playerId.map(first_game) < d.firstSeason

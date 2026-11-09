@@ -20,7 +20,7 @@ Never edit `data/clean` by hand; fix the inputs or the build and rerun.
 |---|---|
 | `data/raw/` | Matt's master exports as of end of 2026, untouched |
 | `data/sources/` | Outside data: `wikipedia/` draft history 2005–25; `dfs/` DFS Australia AFL Fantasy spreadsheets 2023–26; AFL Tables via the [AFL-Data-Analysis](https://github.com/akareen/AFL-Data-Analysis) scrape, AFL Tables 2026 Opening Round pages, Zero Hanger 2027 fixture) |
-| `data/reference/` | Hand-maintained lookups: `venues.csv` (canonical venue names, sponsor aliases, timezones), `list_changes_2027.csv` |
+| `data/reference/` | Hand-maintained lookups: `venues.csv` (canonical venue names, sponsor aliases, timezones), `list_changes_2027.csv`, `draft_links.csv` (hand-checked draft pick → playerId corrections; blank = not an AFL player) |
 | `data/clean/` | The tables to use |
 
 ## Clean tables
