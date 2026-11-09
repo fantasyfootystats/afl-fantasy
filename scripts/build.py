@@ -220,6 +220,13 @@ def build_stats(games):
     print(f"dropped {phantom.sum()} unconfirmed 2005-2011 rows: {s[phantom].displayName.unique().tolist()}")
     s = s[~phantom]
 
+    # hand-checked bad rows in Matt's data from 2012 on (data/reference/drop_rows.csv), e.g. a copied
+    # stat line in a game the player didn't play. Found by scripts/check_identities.py
+    drop = pd.read_csv(ROOT / "data/reference/drop_rows.csv", dtype={"gameId": str, "playerId": "int64"})
+    bad = s.set_index(["gameId", "playerId"]).index.isin(drop.set_index(["gameId", "playerId"]).index)
+    print(f"dropped {bad.sum()} hand-checked bad rows: {s[bad].displayName.tolist()}")
+    s = s[~bad]
+
     # Matt's existing rows win; check they agree with the source where both exist
     both = s.merge(a, on=["gameId", "playerId"], suffixes=("", "_a"))
     mism = (both.fantasyScore != both.fantasyScore_a).sum()
